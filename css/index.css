@@ -126,40 +126,26 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-.fullwidth {
-  width: 100%;
-}
 /* Set every element's box-sizing to border-box */
-* {
-  box-sizing: border-box;
-}
+html,
 body {
-  font-family: Arial;
-  padding: 10px;
-  background: #f1f1f1;
+  width: 900px;
+  margin: auto;
 }
-.header {
+header {
   width: 100%;
-  padding: 30px;
+  padding: 15px;
   text-align: center;
   background: white;
+  margin: auto;
 }
-.header h1 {
+header h1 {
   font-size: 7em;
   font-family: 'faster one';
 }
-@media (max-width: 400px) {
-  .header h1 {
-    font-size: 3em;
-  }
-}
-@media (max-width: 400px) {
-  .header {
-    width: 100%;
-  }
-}
-p {
-  letter-spacing: 2px;
+header p {
+  letter-spacing: 7px;
+  padding: 10px;
 }
 .topnav {
   overflow: hidden;
@@ -176,57 +162,65 @@ p {
   text-decoration: none;
 }
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-@media (max-width: 400px) {
-  .topnav {
-    display: flex;
-    flex-direction: column;
-  }
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
-}
-.leftcolumn {
-  float: left;
-  width: 75%;
-}
-.rightcolumn {
-  float: left;
-  width: 25%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
-}
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-.card {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
+  background-color: red;
+  color: white;
 }
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
+.row .leftcolumn {
+  float: left;
+  width: 58%;
 }
-@media screen and (max-width: 800px) {
-  .leftcolumn {
-    width: 100%;
-    padding: 0;
-  }
-  .rightcolumn {
-    width: 100%;
-    padding: 0;
-  }
+.row .leftcolumn .card {
+  background-color: white;
+  padding: 10px;
+  margin-top: 10px;
+}
+.row .leftcolumn .card .card-heading {
+  font-size: 2em;
+}
+.row .leftcolumn .card p {
+  font-size: 1em;
+  font-family: 'NTR';
+}
+.row .rightcolumn {
+  width: 39%;
+  padding: 10px;
+  float: right;
+  text-align: left;
+  border-left: 1px solid black;
+}
+.row .rightcolumn .card {
+  background-color: white;
+  padding: 10px;
+  margin-top: 10px;
+}
+.row .rightcolumn .card .card-heading {
+  font-size: 2em;
+}
+.row .rightcolumn .card p {
+  border: solid red 1px;
+}
+.footer {
+  width: 100%;
+  height: 50px;
+  background: black;
+  color: white;
+}
+.footer nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 20px;
+}
+.footer a {
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: red;
 }
