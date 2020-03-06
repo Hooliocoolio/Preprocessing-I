@@ -3,20 +3,87 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+githtml,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -24,36 +91,181 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
+
 /* Set every element's box-sizing to border-box */
-* {
-    box-sizing: border-box;
-}
+
+
+// @media screen and (max-width: 800px) {
+// 	.leftcolumn {
+// 		width: 100%;
+// 		padding: 0;
+// 	}
+
+// 	.rightcolumn {
+// 		width: 100%;
+// 		padding: 0;
+// 	}
+// }
 
 html, body {
-    height: 100%;
+	width: 900px;
+	margin: auto;
+
 }
 
+
+header {
+	width: 100%;
+	padding: 15px;
+	text-align: center;
+	background: white;
+	margin: auto;
+	h1 {
+		font-size: 7em;
+		font-family: 'faster one';
+	}
+
+	p {
+		letter-spacing: 7px;
+		padding: 10px;
+		
+	
+	}
+}
+
+.topnav {
+	overflow: hidden;
+	background-color: #333;
+	display: flex;
+	justify-content: space-evenly;
+
+	a {
+		float: left;
+		display: block;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+
+		&:hover {
+			background-color: red;
+			color: white;
+		}
+	}
+}
+
+.row {
+	&:after {
+		content: "";
+		display: table;
+		
+		clear: both;
+	}
+
+	.leftcolumn {
+		float: left;
+		width: 58%;
+
+		.card {
+			background-color: white;
+			padding: 10px;
+			margin-top: 10px;
+
+			.card-heading {
+				font-size: 2em;
+
+			}
+
+			p { 
+				font-size:1em;
+				font-family: 'NTR';
+			}
+		}
+	}
+
+	.rightcolumn {
+			width: 39%;
+			padding: 10px;
+			float:right;
+			text-align: left;
+			border-left: 1px solid black;
+		.card {
+			background-color: white;
+			padding: 10px;
+			margin-top: 10px;
+			.card-heading {
+						font-size:2em;		
+			}
+			p {
+				border: solid red 1px;
+			}
+		}
+	}
+}
+
+.footer {
+		width: 100%;
+		height:50px;
+		background: black;
+		color: white;
+
+		nav {
+			display:flex;
+			justify-content: space-around;
+			align-items: center;
+			padding-top:20px;
+		}
+			a {
+				color: #f2f2f2;
+				text-align: center;
+				text-decoration: none;
+		
+				&:hover {
+					color: red;
+				}
+			}
+		
+}
